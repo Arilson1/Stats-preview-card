@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* ### Primary */
+--Very-dark-blue: hsl(233, 47%, 7%);
+--Dark-desaturated-blue: hsl(244, 38%, 16%);
+--Soft-violet: hsl(277, 64%, 61%);
+   /* ### Neutral */
+--White: hsl(0, 0%, 100%);
+--Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+--Slightly-transparent-white: hsla(0, 0%, 100%, 0.6);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background: var(--Very-dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    width: 80%;
+    height: 60%;
+    background: var(--Dark-desaturated-blue);
+    border-radius: 10px;
+    display: flex;
+}
+
+.info {
+    width: 50%;
+    height: 100%;
+    padding: 60px 50px 0;
+}
+
+.info h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: var(--White);
+    font-size: 36px;
+    max-width: 80%;
+}
+
+.info h1 span {
+    color: var(--Soft-violet);
+}
+
+.info p {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Inter', sans-serif;
+    max-width: 70%;
+    line-height: 1.6;
+    color: var(--Slightly-transparent-white);
+    margin-top: 35px;
+}
+
+.image {
+    width: 50%;
+    height: 100%;
+    background:
+     linear-gradient(
+      hsl(277, 64%, 61%, .7), hsl(277, 64%, 61%, .7)), 
+       url('images/image-header-desktop.jpg') center/cover no-repeat;
+    border-radius: 0 10px 10px 0;
+}
+
+.contentItens {
+    display: flex;
+    justify-content: space-between;
+    max-width: 70%;
+    margin-top: 50px;
+}
+
+.itens h1 {
+    font-size: 24px;
+    margin: 50px 0 0 0;
+}
+
+.itens p {
+    margin-top: 5px;
+}
+
+@media (max-width:376px) {
+    section {
+        width: 90%;
+        height: 85%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .info{
+        width: 100%;
+        height: 70%;
+        padding: 0;
+    }
+
+    .info h1 {
+        text-align: center;
+        max-width: 85%;
+        margin: 30px auto 0;
+        font-size: 30px;
+    }
+
+    .info p {
+        max-width: 80%;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    .image {
+        width: 100%;
+        height: 30%;
+        border-radius: 10px 10px 0 0;
+    }
+
+    .contentItens {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .itens {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .itens h1 {
+        margin: 0;
+        font-size: 20px;
+    }
+
+    .itens p{
+        margin: 0 0 20px 0;
+    }
+}
